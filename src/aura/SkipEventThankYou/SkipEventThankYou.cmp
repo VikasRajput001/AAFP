@@ -1,0 +1,12 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="SkipEventThankYouCtrl">
+	
+    <aura:attribute name="SalesOrderId" type="Id" access="global" default=""/>
+    <aura:registerEvent name="ShowComponentEvent" type="Framework:ShowComponentEvent"/>
+	<!--<aura:registerEvent name="EventPaymentReceipt" type="LTE:EventPaymentReceipt"/>-->   
+    
+    <ltng:require scripts="{!$Resource.PagesApi__FontevaHelper + '/FontevaHelper.js'}" afterScriptsLoaded="{!c.doInit}"/>
+	<aura:handler event="Framework:ShowComponentEvent" action="{!c.handleSwitchComponent}"/>
+    
+    
+    
+</aura:component>
